@@ -1,2 +1,51 @@
 123
 Trois Deux Un    
+Does DG Work Better Under the Business?
+Many Peer Connect members hold the view that DG is inherently a part of the business. Whether it is managing governance as a whole or some part(s) of it, peer members express their pragmatic yet positive perspective toward business as the most important harbinger of data governance.
+A manager of demand management suggests the professionals, planning to decentralize DG, to prioritize placing it under the business. According to him, it is required to be governed through a doc control system (workflow, escalation, etc.) that is suitably devised or drafted in advance to ensure success. “Depending how far you are with going ‘digital’ you may want to consider on a central data organization (CDO) for the company. Once data is pushed through the business, having a central team to enhance, maintain and leverage the data for ML/Algorithms might be a good move,” the peer states.
+“Data management and governance in our merchant bank resides under chief operations office as it is treated as a service to the business,” highlights another Peer Connect member. Shifting his focus toward data stewardship in the organization, he mentions that it follows a hybrid model where the stewards are deployed into the lines of business with a reporting line to the head of data management. These converge in the information governance committee that is held monthly in his organization with data owners who drive data strategic intent and data governance maturity, and provide oversight.
+Business in the Vanguard; Auxiliary Support by Others
+The primary role of the business steering data governance is often highlighted in the recommendations of many Peer Connect members. Another aspect focused upon in their suggestions is the ancillary support for DG provided by nonbusiness departments.
+A peer, whose team has established an information management office to lay the technical foundation to support a robust data governance practice, mentions that the ownership of the data governance practice is with their business. “As we are a financial services enterprise, our actuary organization took the ownership and IMO is providing supporting.” The peer puts forward an argument that it requires a collaborative effort between business and IT to successfully implement data governance.
+Describing their organization’s DG initiative as “by the business, for the business,” a vice president highlights the support provided by the analytics and data division to the business in managing DG. He highlights that the strength of this program is the alignment of business accountability and decision making for data as well as partnering with the IT organization as opposed to relying on it. Furthermore, the peer adds, “The chief data and analytics officer (CDAO) and I are facilitators/enablers of the process. As far as our data management and integration area is concerned, it also reports into the CDAO, as does BI/advanced analytics/data science. This structure provides us with strong and respected data knowledge and decent understanding of the business processes that create and use our company’s data.”
+Equal Involvement of Different Departments
+The success of data governance catapulted by different organizational departments working in tandem is something highly favored by a number of Peer Connect members.
+A data and analytics platform executive has found that a combination of centralized hub, decentralized data governance and information management teams (spokes) tends to be the most effective. He lays down major governance and data management responsibilities assigned to different departments:
+Hub (Enterprise/Centralized) Team
+•	Set up the policy.
+•	Develop standards, best practices, processes and procedures.
+•	Drive tool selection and manage the centralized tools and platforms (metadata, data quality, workflow, etc.).
+•	Define information governance and management maturity model.
+•	Define, collect and publish enterprise-level metrics.
+•	Assess adherence in the spokes.
+•	Manage enterprise information architecture/logical model.
+•	Manage the enterprise information governance council.
+•	Impart training.
+Spokes
+•	Ensure spoke adherence to policy, standards, processes and procedures.
+•	Manage line-of-business data governance/stewardship council.
+•	Leverage enterprise platforms and tools to implement data quality rules, manage workflow, etc. for spokes.
+•	Manage spoke business catalog and lexicon, thereby ensuring adherence to the enterprise lexicon.
+As opposed to the state of appurtenance wherein the principal entity (in this case, business) received support from other departments in governing data, various Peer Connect members favor equal participation of business and IT in data governance.
+One of the striking examples is that of a data governance office, at a peer’s organization, that not only reports into the technology advancement area in IT but also partners with data stewards from the business. Highlighting the organization’s data governance office (DGO) attributes, the peer mentions, “It’s really more of an orchestrator than an owner. It does own the processes and standards, but relies on business to facilitate.” The peer also adds, “One advantage of having it coupled with IT is that when implementing tools like data catalogs or centralized data lineage management, having an intimate understanding of the technology landscape can help guarantee success.” Ultimately, for achieving success with the initiative, he discourages creating a delineation between IT and business and emphasizes recognizing the organization as one entity followed by the full integration of the function.
+A peer member, working at a utilities organization highlights the presence of a data governance assurance group, which consists of data stewards representing different data domains. “The data governance framework is owned within the business and IT is a key stakeholder and an enabler in terms of reviewing policies, changes etc. to ensure they fall in line with our data principles and discussing the related technical implications. The original framework was built with IT input but ownership has been maintained within the business,” he adds.
+Furthermore, what another director has observed is that the partnership between legal, compliance, business functions, IT and global security plays a decisive role in creating a powerful structure for driving accountability and action in this space.
+Key Factors Catapulting Success
+Amid the discussion where most of the peer members discussed their organization’s approach toward data governance, there are two Peer Connect members who shed light on indispensable factors playing an important role in defining the success of an organization’s data governance initiative.
+A director of analytics enablement lays down the following critical elements:
+•	Acquire executive sponsorship for data owners.
+•	Prioritize executive alignment with the DG practice.
+•	Ensure the state of readiness and preparedness toward change.
+•	Focus on alignment between IT, compliance, legal and security for effective partnership, and avoiding breakdown in either policy or execution.
+•	Find a globally capable function willing to commence the task.
+•	Build a strong DG practice that focuses on compliance, value and protection.
+Averting the Rise of a Dysfunctional Culture
+A director of business intelligence and data, who has set up enterprise DG programs in both business and technology departments, argues that the culture of an organization plays a far bigger role in determining the ideal place of DG.
+He further adds, “If the culture is too dysfunctional, little will get done or change. If there’s no clear process to adopt change, the best technology will fail to effect the desired change. If technology is not delivering on business demand and priorities, then manual steps, workarounds and shadow IT will perpetuate or even amplify the fractures that data governance is seeking to help wrangle.”
+Expressing his qualm, the peer states that many organizations are in a dysfunctional state. He opines that they tend to hold up data governance charters, Hadoop clusters and enterprise architecture frameworks as a means to distract from scenario(s) whose undesirable nature has been disguised in a futile attempt by making superficial changes.
+Key Take-Aways
+•	Reporting hierarchy of data governance is contextual in nature.
+•	Data governance requires varying levels of involvement from different departments depending upon the structure, culture and requirements of an organization.
+•	Circumvent the rise of a dysfunctional culture for effective implementation of data governance.
+•	Focus on critical elements that play a major role in defining the success of data governance.
+

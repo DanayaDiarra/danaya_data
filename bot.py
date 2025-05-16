@@ -5,62 +5,63 @@
 import os
 import logging
 import tempfile
+import requests
 import subprocess
-from telegram import Update, Bot
+from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from googletrans import Translator
-import whisper
 
-# Load Whisper model
-whisper_model = whisper.load_model("tiny")
-
-
-
-# Configure logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
+# Set up logging
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Initialize Google Translator
+# Translator
 translator = Translator()
 
-# Telegram bot token
-TOKEN = "7884468418:AAH2hQcZ43ABqqcKEEviXrFEw31mQt5gOeY"
+# Your Telegram Bot Token
+TOKEN = os.getenv("7884468418:AAH2hQcZ43ABqqcKEEviXrFEw31mQt5gOeY")  # use env variable
 
-# Handle /start command
+# Hugging Face Whisper API
+HF_API_URL = "https://api-inference.huggingface.co/models/openai/whisper-small"
+HF_API_KEY = os.getenv("HF_API_KEY")  # Add your Hugging Face token to the env
+
+headers = {"Authorization": f"Bearer {HF_API_KEY}"}
+
+
 def start(update: Update, context: CallbackContext):
-    update.message.reply_text("Hello! I'm a translator bot. Send me a message or voice note.")
+    update.message.reply_text("Hello! I'm a multilingual translator bot. Send a message or voice note.")
 
-# Handle text messages
+
 def translate_text(update: Update, context: CallbackContext):
     original_text = update.message.text
     translated = translator.translate(original_text, dest='en')
     update.message.reply_text(f"Translation: {translated.text}")
 
-# Handle voice messages
+
 def handle_voice(update: Update, context: CallbackContext):
-    voice = update.message.voice.get_file()
+    file = update.message.voice.get_file()
     with tempfile.TemporaryDirectory() as tmpdir:
         ogg_path = os.path.join(tmpdir, "voice.ogg")
         wav_path = os.path.join(tmpdir, "voice.wav")
-        
-        # Download and convert to wav
-        voice.download(ogg_path)
+
+        file.download(ogg_path)
         subprocess.run(["ffmpeg", "-i", ogg_path, wav_path])
 
-        # Transcribe audio to text
-        result = whisper_model.transcribe(wav_path)
-        text = result['text']
+        with open(wav_path, "rb") as audio_file:
+            response = requests.post(HF_API_URL, headers=headers, data=audio_file)
 
-        # Translate to English
-        translated = translator.translate(text, dest='en')
-        update.message.reply_text(f"Voice Translation: {translated.text}")
+        if response.status_code == 200:
+            result = response.json()
+            text = result.get("text", "")
+            translated = translator.translate(text, dest='en')
+            update.message.reply_text(f"Voice Translation: {translated.text}")
+        else:
+            update.message.reply_text("Sorry, I couldn't transcribe the voice message.")
 
-# Main function to start the bot
+
 def main():
     updater = Updater(TOKEN)
     dp = updater.dispatcher
-
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, translate_text))
     dp.add_handler(MessageHandler(Filters.voice, handle_voice))
@@ -68,5 +69,6 @@ def main():
     updater.start_polling()
     updater.idle()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

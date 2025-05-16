@@ -15,6 +15,7 @@ import whisper
 whisper_model = whisper.load_model("tiny")
 
 
+
 # Configure logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -24,7 +25,7 @@ logger = logging.getLogger(__name__)
 translator = Translator()
 
 # Telegram bot token
-TOKEN = "YOUR_BOT_TOKEN_HERE"
+TOKEN = "7884468418:AAH2hQcZ43ABqqcKEEviXrFEw31mQt5gOeY"
 
 # Handle /start command
 def start(update: Update, context: CallbackContext):

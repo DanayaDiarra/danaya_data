@@ -12,7 +12,8 @@ from googletrans import Translator
 import whisper
 
 # Load Whisper model
-whisper_model = whisper.load_model("base")
+whisper_model = whisper.load_model("tiny")
+
 
 # Configure logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',

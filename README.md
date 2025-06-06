@@ -1,4 +1,4 @@
-# Danaya Data Repo
+# Welcome to Danaya Data Repo
 
 This repository is reserved for clean datasets, scripts, or projects by Danaya Diarra.
 
